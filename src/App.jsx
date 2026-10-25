@@ -176,23 +176,23 @@ export default function App() {
     {
       id: 1,
       before:
-        "https://avatars.mds.yandex.net/get-altay/10285614/2a0000018ff17c36acd2ade033bc6160724c/L_height",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
       after:
-        "https://santamebel.ru/upload/iblock/c57/7asqexp4wrbvm9ho0nkna02j4st34v98.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
     },
     {
       id: 2,
       before:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYQOqGub_u7ceRGWZ31kzcK6JrNuytL4m2umRwP5LvsRaWXA0JwPogc-c&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
       after:
-        "https://laparet.ru/upload/iblock/555/CHto_takoe_santekhnika_7.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
     },
     {
       id: 3,
       before:
-        "https://aqualiga.ru/upload/medialibrary/ecb/n53espm0jqyy4hs90l50uqfazrg6v2se.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
       after:
-        "https://www.santehmag.ru/content/home-page/category-icon/mixers.webp",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJqiNRus7o3NK7aZjF-_oadO1IetWbZTJ0QHkFOs0NFeW_ZTQpKZOp_U&s=10",
     },
   ];
 
@@ -346,20 +346,65 @@ export default function App() {
               </button>
             </div>
 
-            <div style={{ textAlign: "right" }}>
+            <div
+              style={{
+                textAlign: "right",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+              }}
+            >
+              {/* ИКОНКА WHATSAPP */}
               <a
-                href="tel:+3123456789"
+                href="https://wa.me" // Укажите номер телефона в международном формате без плюса и скобок
+                target="_blank"
+                rel="noopener noreferrer"
+                title="WhatsApp"
                 style={{
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  color: colors.textMain,
-                  textDecoration: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "#25D366", // Фирменный цвет WhatsApp
+                  borderRadius: "50%",
+                  width: "36px",
+                  height: "36px",
+                  transition: "transform 0.2s",
+                  flexShrink: 0,
                 }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.08)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               >
-                +31 (0) 23 456 789
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="#ffffff"
+                  xmlns="http://w3.org"
+                >
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.292 1.48 4.74 1.481 5.426.002 9.842-4.359 9.845-9.721.001-2.597-1.01-5.038-2.846-6.874C16.486 2.203 14.05 1.188 12.01 1.188c-5.43 0-9.843 4.358-9.846 9.725-.001 1.52.41 3.018 1.192 4.33l-.994 3.635 3.695-.97zM17.422 14.34c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.011c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+                </svg>
               </a>
-              <div style={{ fontSize: "12px", color: colors.textSecond }}>
-                {t.workingHours}
+
+              {/* ТЕЛЕФОН И ВРЕМЯ РАБОТЫ */}
+              <div style={{ textAlign: "right" }}>
+                <a
+                  href="tel:+3123456789"
+                  style={{
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                    color: colors.textMain,
+                    textDecoration: "none",
+                  }}
+                >
+                  +31 (0) 23 456 789
+                </a>
+                <div style={{ fontSize: "12px", color: colors.textSecond }}>
+                  {t.workingHours}
+                </div>
               </div>
             </div>
 
