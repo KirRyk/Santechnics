@@ -931,6 +931,8 @@ export default function App() {
                 pointerEvents: "none",
               }}
             />
+
+            {/* Надпись ПОСЛЕ (Исчезает, если ползунок сдвинут вправо ближе чем на 12%) */}
             <div
               style={{
                 position: "absolute",
@@ -943,6 +945,9 @@ export default function App() {
                 fontSize: "14px",
                 fontWeight: "bold",
                 zIndex: 10,
+                opacity: sliderPos > 88 ? 0 : 1,
+                transition: "opacity 0.15s ease-out",
+                pointerEvents: "none",
               }}
             >
               {t.labelAfter}
@@ -971,6 +976,8 @@ export default function App() {
                   pointerEvents: "none",
                 }}
               />
+
+              {/* Надпись ДО (Исчезает, если ползунок сдвинут влево ближе чем на 12%) */}
               <div
                 style={{
                   position: "absolute",
@@ -983,6 +990,9 @@ export default function App() {
                   fontSize: "14px",
                   fontWeight: "bold",
                   whiteSpace: "nowrap",
+                  opacity: sliderPos < 12 ? 0 : 1,
+                  transition: "opacity 0.15s ease-out",
+                  pointerEvents: "none",
                 }}
               >
                 {t.labelBefore}
@@ -1056,7 +1066,7 @@ export default function App() {
           </button>
         </div>
 
-        {/* Индикаторы (точки) под слайдером, чтобы видно было сколько всего кейсов */}
+        {/* Индикаторы (точки) под слайдером */}
         <div
           style={{
             display: "flex",
@@ -1069,6 +1079,7 @@ export default function App() {
             <div
               key={idx}
               onClick={() => {
+                setTimestamp(Date.now());
                 setSliderPos(50);
                 setActiveCaseIdx(idx);
               }}
